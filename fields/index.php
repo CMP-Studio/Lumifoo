@@ -1,0 +1,7 @@
+<pre>
+<?php
+var_dump($_FILES);
+var_dump($_SESSION);
+
+ ?>
+ </pre>

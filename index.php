@@ -43,7 +43,7 @@ if(isset($surveys->surveyName))
         <td>
           <div class="radio">
           <label>
-            <input type="radio" name="surveyRadio" id="sr_<?php print $s->surveyId; ?>" value="<?php print $s->surveyId; ?>">
+            <input type="radio" name="survey_id" id="sr_<?php print $s->surveyId; ?>" value="<?php print $s->surveyId; ?>">
             <?php
            print $s->surveyName;
            ?>
@@ -54,5 +54,7 @@ if(isset($surveys->surveyName))
       <?php } ?>
    </table>
  </div>
- <button class="btn btn-default" type="submit">Next</button>
+ <div id="survey_submit">
+   <button class="btn btn-default" type="submit">Next</button>
+ </div>
  </form>
