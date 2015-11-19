@@ -81,7 +81,8 @@ $_SESSION["survey_questions"] = $questions;
 
  ?>
 
- <form action="/fields/">
+ <form action="/fields/" method="POST" enctype="multipart/form-data">
    <label for="csvFileUpload">Upload Wufoo CSV</label>
-   <input type="file" id="csvFileUpload" accept="*.csv">
+   <input type="file" name="csv_file" id="csvFileUpload">
+   <button class="btn btn-default" type="submit">Next</button>
 </form>
