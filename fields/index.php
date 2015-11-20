@@ -60,6 +60,11 @@ body_open();
        <th>Luminate Field Type</th>
        <th>Wufoo Import Field</th>
      </tr>
+     <tr class="alt-row">
+       <td>Email Address</td>
+       <td>Constituent Information</td>
+       <td><?php printSelectHTML($fields, "cons_email"); ?></td>
+     </tr>
      <?php
      foreach ($questions as $key => $q) {
        ?>
@@ -71,7 +76,7 @@ body_open();
           <?php print $q["type"]; ?>
         </td>
         <td>
-          <?php printSelectHTML($fields, $key); ?>
+          <?php printSelectHTML($fields, "question_" . $key); ?>
         </td>
       </tr>
       <?php } ?>

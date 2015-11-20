@@ -24,7 +24,7 @@ foreach ($_POST as $lum => $wuf) {
 $postVars = array();
 
 
-$id = $_SESSION["survey_id"];
+
 
 
 
@@ -36,11 +36,11 @@ foreach ($csv as $rNum => $row)
   $quest = array();
   foreach ($fieldMap as $lum => $wuf)
   {
-    $quest["question_$lum"] = $row[$wuf];
+    $quest[$lum] = $row[$wuf];
   }
-  $t_params = array_merge($params, $quest);
-  if(!isset($t_params)) continue;
-  $postVars[] = $t_params;
+
+  if(!isset($quest)) continue;
+  $postVars[] = $quest;
 }
 $count = count($postVars);
 
