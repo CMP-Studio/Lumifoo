@@ -7,6 +7,7 @@ session_start();
 
 require_once __DIR__ . "/../app/util/api.php";
 require_once __DIR__ . "/../templates/head.php";
+require_once __DIR__ . "/templates/body.php";
 require_once __DIR__ . "/../config/luminate.php";
 
 
@@ -36,6 +37,7 @@ $res = sendAPI($url,$param, true);
 if(isset($res->getSingleSignOnTokenResponse->token))
 {
   $token = $res->getSingleSignOnTokenResponse->token;
+  $_SESSION["sso_token"] = $token;
 }
 else {
   var_dump($res);
@@ -79,6 +81,7 @@ foreach ($Qs as $key => $q)
 
 $_SESSION["survey_questions"] = $questions;
 
+body_open();
  ?>
 
  <form action="/fields/" method="POST" enctype="multipart/form-data">
@@ -86,3 +89,5 @@ $_SESSION["survey_questions"] = $questions;
    <input type="file" name="csv_file" id="csvFileUpload">
    <button class="btn btn-default" type="submit">Next</button>
 </form>
+
+<?php body_close(); ?>

@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 
 require_once __DIR__ . "/app/util/api.php";
 require_once __DIR__ . "/templates/head.php";
+require_once __DIR__ . "/templates/body.php";
 require_once __DIR__ . "/config/luminate.php";
 
 $url = "https://secure2.convio.net/cmp/site/CRSurveyAPI";
@@ -28,6 +29,7 @@ if(isset($surveys->surveyName))
   $surveys = array($surveys);
 }
 
+body_open();
  ?>
 
  <form action="upload/" method="post">
@@ -58,3 +60,4 @@ if(isset($surveys->surveyName))
    <button class="btn btn-default" type="submit">Next</button>
  </div>
  </form>
+ <?php body_close(); ?>

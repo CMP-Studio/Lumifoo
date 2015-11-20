@@ -3,6 +3,7 @@ session_start();
 
 require_once __DIR__ . "/../app/util/api.php";
 require_once __DIR__ . "/../templates/head.php";
+require_once __DIR__ . "/templates/body.php";
 require_once __DIR__ . "/../config/files.php";
 
 
@@ -48,6 +49,7 @@ function printSelectHTML($fields, $name)
 
 $questions = $_SESSION["survey_questions"];
 
+body_open();
  ?>
 
  <form action="/import/" method="post">
@@ -79,3 +81,5 @@ $questions = $_SESSION["survey_questions"];
    <button class="btn btn-default" type="submit">Start Import</button>
  </div>
  </form>
+
+ <?php body_close(); ?>
