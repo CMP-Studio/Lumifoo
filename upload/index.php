@@ -7,7 +7,7 @@ session_start();
 
 require_once __DIR__ . "/../app/util/api.php";
 require_once __DIR__ . "/../templates/head.php";
-require_once __DIR__ . "/templates/body.php";
+require_once __DIR__ . "/../templates/body.php";
 require_once __DIR__ . "/../config/luminate.php";
 
 
