@@ -67,6 +67,7 @@ body_open();
      </tr>
      <?php
      foreach ($questions as $key => $q) {
+       if($q["type"] != "ConsQuestion") {
        ?>
       <tr>
         <td>
@@ -79,7 +80,10 @@ body_open();
           <?php printSelectHTML($fields, "question_" . $key); ?>
         </td>
       </tr>
-      <?php } ?>
+      <?php
+      }
+     }
+     ?>
    </table>
  </div>
  <div id="field_submit">

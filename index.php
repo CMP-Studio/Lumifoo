@@ -21,6 +21,8 @@ $param = array(
 
 $res = sendAPI($url,$param);
 
+$jres = json_encode($res);
+print "<script>console.log($jres);</script>";
 
 $surveys = $res->listSurveysResponse->surveys;
 

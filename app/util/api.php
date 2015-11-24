@@ -1,6 +1,6 @@
 <?php
 
-function sendAPI($url, $variables=null, $post=false, $headers=null)
+function sendAPI($url, $variables, $post=false, $headers=null)
 {
     $params = http_build_query($variables);
 
@@ -14,6 +14,7 @@ function sendAPI($url, $variables=null, $post=false, $headers=null)
     else
     {
       curl_setopt($curl,	CURLOPT_URL				, "$url?$params");
+      print "<script>console.log($url?$params);</script>";
     }
     if(isset($headers))
     {

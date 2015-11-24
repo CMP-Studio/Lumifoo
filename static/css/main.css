@@ -10,6 +10,7 @@ body
   background-color: #f8f8f8;
   border-radius: 5px;
   padding-top: 5px;
+  padding-bottom: 5px;
   padding-left:10px;
   padding-right: 10px;
 }
@@ -21,5 +22,11 @@ body
 
 .alt-row
 {
-  background-color: #AAAAAA;
+  background-color: #DDDDDD;
+}
+
+.center
+{
+  width:100%;
+  text-align: center;
 }

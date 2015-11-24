@@ -1,7 +1,10 @@
+<head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<title>Lumifoo</title>
 
 <!-- jQuery -->
  <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
@@ -24,3 +27,4 @@
 
 <!-- Local CSS -->
 <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+</head>

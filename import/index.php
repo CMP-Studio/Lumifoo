@@ -63,6 +63,9 @@ body_open();
    <div id="api_err" class="progress-bar progress-bar-striped progress-bar-danger active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
    </div>
  </div>
+ <p>Details</p>
+ <ul id="error_list">
+</ul>
 
  <script>
   $( document ).ready()
@@ -88,10 +91,16 @@ body_open();
             {
               complete++;
               updateProgress(complete, total);
+
+              if(complete >= total)
+              {
+                window.location.replace("/fin/");
+              }
               return;
             }
           }
           error++;
+          $("#error_list").append("<li>" + result.errorResponse.message + "</li>");
           console.log(result);
           updateErrors(error,total);
         });
